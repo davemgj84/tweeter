@@ -1,0 +1,40 @@
+/* NEW TWEET STYLING */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  background: transparent;
+  border: 0;
+  border-bottom: 3px solid;
+  border-bottom-color: #545149;
+  resize: none;
+  outline: none;
+}
+
+.submitTweet {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+button {
+  font-family: "Bungee", cursive;
+  background-color: #4056A1;
+  border-width: 0;
+  color: #FFFF;
+}
+
+output {
+  font-family: "Bungee", cursive;
+}
+
+label {
+  font-weight: 700;
+}
+
+.new-tweet {
+  width: 50%;
+}
