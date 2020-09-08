@@ -1,0 +1,25 @@
+/* HEADER STYLING */
+
+header {
+  height: 400px;
+  width: 100%;
+  background-color: #e05a00;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  color: #FFFF;
+}
+
+.lastName {
+  font-weight: 300;
+}
