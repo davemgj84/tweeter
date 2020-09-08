@@ -38,3 +38,7 @@ label {
 .new-tweet {
   width: 75%;
 }
+
+.negative {
+  color: red;
+}
