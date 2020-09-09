@@ -10,12 +10,14 @@ article {
 article.tweet header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .avatar-and-name {
   display: flex;
   align-items: center;
   padding: 2em;
+  padding-left: 3em;
 }
 
 .avatar-and-name img {
@@ -24,6 +26,7 @@ article.tweet header {
 
 .username {
   padding: 2em;
+  padding-right: 3em;
   color: transparent;
   font-weight: 700;
 }
@@ -32,11 +35,11 @@ article.tweet header {
   display: flex;
   font-weight: 700;
   margin: 0 auto;
-  width: 95%;
+  width: 96%;
   border-bottom: 5px solid;
 }
 
-.message>p {
+.message > p {
   padding-left: 1em;
 }
 
@@ -47,10 +50,12 @@ article.tweet footer {
 
 .date {
   padding: 2em;
+  padding-left: 3em;
 }
 
 .likes {
   padding: 2em;
+  padding-right: 3em;
 }
 
 .likes {
@@ -64,4 +69,3 @@ article.tweet footer {
 .tweet:hover .username {
   color: #C5CBE3;
 }
-
