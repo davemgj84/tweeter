@@ -1,0 +1,67 @@
+/* TWEET CONTAINER LAYOUT */
+
+article {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid;
+  margin-top: 1em;
+}
+
+article.tweet header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatar-and-name {
+  display: flex;
+  align-items: center;
+  padding: 2em;
+}
+
+.avatar-and-name img {
+  padding-right: 1em;
+}
+
+.username {
+  padding: 2em;
+  color: transparent;
+  font-weight: 700;
+}
+
+.message {
+  display: flex;
+  font-weight: 700;
+  margin: 0 auto;
+  width: 95%;
+  border-bottom: 5px solid;
+}
+
+.message>p {
+  padding-left: 1em;
+}
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  padding: 2em;
+}
+
+.likes {
+  padding: 2em;
+}
+
+.likes {
+  color: #4056A1;
+}
+
+.tweet:hover {
+  box-shadow: 10px 10px #C5CBE3;
+}
+
+.tweet:hover .username {
+  color: #C5CBE3;
+}
+

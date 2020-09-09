@@ -1,5 +1,10 @@
 /* NEW TWEET STYLING */
 
+.new-tweet {
+  margin: 0 auto;
+  width: 75%;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -8,7 +13,7 @@ form {
 textarea {
   background: transparent;
   border: 0;
-  border-bottom: 3px solid;
+  border-bottom: 5px solid;
   border-bottom-color: #545149;
   resize: none;
   outline: none;
@@ -18,6 +23,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 button {
@@ -33,10 +39,6 @@ output {
 
 label {
   font-weight: 700;
-}
-
-.new-tweet {
-  width: 75%;
 }
 
 .negative {
