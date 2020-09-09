@@ -63,9 +63,9 @@ article.tweet footer {
 }
 
 .tweet:hover {
-  box-shadow: 10px 10px #C5CBE3;
+  box-shadow: 10px 10px #8c99c6;
 }
 
 .tweet:hover .username {
-  color: #C5CBE3;
+  color: #7988bd;
 }

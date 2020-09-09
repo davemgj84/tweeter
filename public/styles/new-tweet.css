@@ -2,7 +2,7 @@
 
 .new-tweet {
   margin: 0 auto;
-  width: 75%;
+  width: 80%;
 }
 
 form {
@@ -31,6 +31,10 @@ button {
   background-color: #4056A1;
   border-width: 0;
   color: #FFFF;
+}
+
+button:hover {
+  box-shadow: 5px 5px #8c99c6;
 }
 
 output {
