@@ -37,6 +37,20 @@ button {
   outline: none;
 }
 
+.error-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin: 0 auto;
+  border: 3px solid;
+  border-color: #ff0033;
+  color: #ff0033;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  width: 80%;
+}
+
 button:hover {
   box-shadow: 5px 5px #8c99c6;
 }

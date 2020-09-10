@@ -9,6 +9,19 @@
 
 $(document).ready(function() {
 
+  //Hides error box for new tweets upon page load:
+  $(".error-message").hide();
+
+  // Variables for my error messages in new tweets - needed to make variables to make it cleaner below with icons:
+  const errorBoxHtmlOne = `
+  <i class="fas fa-exclamation-circle"></i> 
+  &nbsp;&nbsp; Please Enter a Message to Tweet &nbsp;&nbsp; 
+  <i class="fas fa-exclamation-circle"></i>`;
+  const errorBoxHtmlTwo = `
+  <i class="fas fa-exclamation-circle"></i> 
+  &nbsp;&nbsp; Your tweet is too long - Make sure your tweet is under 140 characters &nbsp;&nbsp; 
+  <i class="fas fa-exclamation-circle"></i>`;
+
   // ESCAPE FUNCTION to stop malicious activity being passed into the tweet:
   const escape = (string) => {
     const regex = /[&<>"'/]/ig;
@@ -71,12 +84,13 @@ $(document).ready(function() {
 
   $postForm.on('submit', function(event) {
     event.preventDefault();
+    const errorBox = $(".error-message");
     const serializedData = $(this).serialize();
     const characters = $("#tweet-text").val();
     if (characters.length === 0 || characters === null || characters === "") {
-      alert("Please enter a message to Tweet");
+      errorBox.html(errorBoxHtmlOne).slideDown(2000).slideUp(1000);
     } else if (characters.length > 140) {
-      alert("There is a 140 character limit");
+      errorBox.html(errorBoxHtmlTwo).slideDown(2000).slideUp(1000);
     } else {
       $.post('/tweets', serializedData)
         .then(() => {
