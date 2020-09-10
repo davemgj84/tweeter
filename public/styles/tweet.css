@@ -33,14 +33,14 @@ article.tweet header {
 
 .message {
   display: flex;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 auto;
   width: 96%;
-  border-bottom: 5px solid;
+  border-bottom: 4px solid;
   word-break: break-word;
 }
 
-.message > p {
+.message p {
   padding-left: 1em;
 }
 
@@ -57,16 +57,32 @@ article.tweet footer {
 .likes {
   padding: 2em;
   padding-right: 3em;
+  color: transparent;
+  cursor: pointer;
 }
 
-.likes {
+/* BELOW ARE ALL THE ON HOVER EFFECTS */
+.tweet:hover .avatar-and-name {
+  font-weight: 600;
+}
+
+.tweet:hover .username {
+  color: #8c99c6;
+}
+
+.tweet:hover .message {
+  font-weight: 700;
+  border-bottom: 5px solid;
+}
+
+.tweet:hover .date {
+  font-weight: 600;
+}
+
+.tweet:hover .likes {
   color: #4056A1;
 }
 
 .tweet:hover {
   box-shadow: 10px 10px #8c99c6;
-}
-
-.tweet:hover .username {
-  color: #7988bd;
 }

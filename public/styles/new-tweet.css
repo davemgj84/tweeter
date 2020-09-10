@@ -29,12 +29,13 @@ textarea {
   margin-bottom: 1em;
 }
 
-button {
+.submitTweet button {
   font-family: "Bungee", cursive;
   background-color: #4056A1;
   border-width: 0;
   color: #FFFF;
-  outline: none;
+  outline-color: #8c99c6;
+  cursor: pointer;
 }
 
 .error-message {
@@ -51,7 +52,7 @@ button {
   width: 80%;
 }
 
-button:hover {
+.submitTweet button:hover {
   box-shadow: 5px 5px #8c99c6;
 }
 
@@ -63,6 +64,6 @@ label {
   font-weight: 700;
 }
 
-.negative {
+.red {
   color: red;
 }

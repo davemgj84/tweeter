@@ -12,7 +12,8 @@ $(document).ready(function() {
   //Hides error box for new tweets upon page load:
   $(".error-message").hide();
 
-  // Variables for my error messages in new tweets - needed to make variables to make it cleaner below with icons:
+  // Variables for my error messages in new tweets -
+  // Decided to make variables to make it cleaner below with icons:
   const errorBoxHtmlOne = `
   <i class="fas fa-exclamation-circle"></i> 
   &nbsp;&nbsp; Please Enter a Message to Tweet &nbsp;&nbsp; 
@@ -84,19 +85,19 @@ $(document).ready(function() {
 
   $postForm.on('submit', function(event) {
     event.preventDefault();
-    const errorBox = $(".error-message");
+    const $errorBox = $(".error-message")
     const serializedData = $(this).serialize();
     const characters = $("#tweet-text").val();
     if (characters.length === 0 || characters === null || characters === "") {
-      errorBox.html(errorBoxHtmlOne).slideDown(2000).slideUp(1000);
+      $errorBox.html(errorBoxHtmlOne).slideDown()
     } else if (characters.length > 140) {
-      errorBox.html(errorBoxHtmlTwo).slideDown(2000).slideUp(1000);
+      $errorBox.html(errorBoxHtmlTwo).slideDown()
     } else {
       $.post('/tweets', serializedData)
         .then(() => {
           $(this).children('textarea').val('');
           $('.counter').val(140);
-          $('.counter').removeClass('negative'); //redundant;
+          $('.counter').removeClass('red'); //redundant;
           loadtweets();
         });
     }
