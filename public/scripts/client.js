@@ -38,6 +38,7 @@ $(document).ready(function() {
   // renders the tweets by looping through the user tweet database and creates a tweet element for each tweet,
   // the prepends them to the appropriate section.
   const renderTweets = function(data) {
+    $('#tweets').empty();
     for (const id of data) {
       const $tweet = createTweetElement(id);
       $('#tweets').prepend($tweet);
@@ -57,13 +58,21 @@ $(document).ready(function() {
   $postForm.on('submit', function(event) {
     event.preventDefault();
     const serializedData = $(this).serialize();
-    $.post('/tweets', serializedData)
-      .then(() => {
-        loadtweets();
-        $(this).children('textarea').val('');
-        $('.counter').val(140);
-        $('.counter').removeClass('negative');
-      });
+    const characters = $("#tweet-text").val();
+    if (characters.length === 0 || characters === null || characters === "") {
+      alert("Please enter a message to Tweet")
+    } else if (characters.length > 140) {
+      alert("There is a 140 character limit")
+    } else {
+      $.post('/tweets', serializedData)
+        .then(() => {
+          $(this).children('textarea').val('');
+          $('.counter').val(140);
+          $('.counter').removeClass('negative'); //redundant;
+          loadtweets();
+        });
+    }
   });
 
+  loadtweets();
 });

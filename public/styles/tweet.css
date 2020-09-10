@@ -37,6 +37,7 @@ article.tweet header {
   margin: 0 auto;
   width: 96%;
   border-bottom: 5px solid;
+  word-break: break-word;
 }
 
 .message > p {

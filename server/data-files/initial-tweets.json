@@ -1,23 +1,23 @@
 [
   {
     "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
+      "name": "Jeffrey Lebowski",
+      "avatars": "https://i.imgur.com/5fUVPRP.png"
       ,
-      "handle": "@SirIsaac"
+      "handle": "@TheDude"
     },
     "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "This is a very complicated case.. You know, a lotta ins, a lotta outs, lotta what-have-yous.."
     },
     "created_at": 1461116232227
   },
   {
     "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
+      "name": "Walter Sobchak",
+      "avatars": "https://i.imgur.com/73hZDYK.png",
+      "handle": "@W-Sobchak" },
     "content": {
-      "text": "Je pense , donc je suis"
+      "text": "This is not 'Nam, this is bowling, there are rules."
     },
     "created_at": 1461113959088
   }
