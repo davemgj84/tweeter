@@ -9,6 +9,20 @@
 
 $(document).ready(function() {
 
+  // ESCAPE FUNCTION to stop malicious activity being passed into the tweet:
+  const escape = (string) => {
+    const regex = /[&<>"'/]/ig;
+    const map = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#x27;",
+      "/": "&#x2F;"
+    };
+    return string.replace(regex, match => map[match]);
+  };
+
   // Creates a tweet element with a tweet template using template literals to pull data from user objects:
   const createTweetElement = function(data) {
     const tweetTemplate = `<article class="tweet" >
@@ -21,7 +35,7 @@ $(document).ready(function() {
           </span>
       </header>
       <div class="message">
-        <p>${data.content.text}</p>
+        <p>${escape(data.content.text)}</p>
       </div>
       <footer>
         <span class="date">${moment(data.created_at).fromNow()}</span>
@@ -60,9 +74,9 @@ $(document).ready(function() {
     const serializedData = $(this).serialize();
     const characters = $("#tweet-text").val();
     if (characters.length === 0 || characters === null || characters === "") {
-      alert("Please enter a message to Tweet")
+      alert("Please enter a message to Tweet");
     } else if (characters.length > 140) {
-      alert("There is a 140 character limit")
+      alert("There is a 140 character limit");
     } else {
       $.post('/tweets', serializedData)
         .then(() => {

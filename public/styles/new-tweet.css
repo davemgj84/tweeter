@@ -17,6 +17,9 @@ textarea {
   border-bottom-color: #545149;
   resize: none;
   outline: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  color: #4056A1;
 }
 
 .submitTweet {
