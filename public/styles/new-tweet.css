@@ -5,9 +5,13 @@
   width: 80%;
 }
 
-form {
+#submit-form {
   display: flex;
   flex-direction: column;
+}
+
+#submit-form label {
+  margin-bottom: 1em;
 }
 
 textarea {

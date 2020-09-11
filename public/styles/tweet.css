@@ -5,6 +5,7 @@ article {
   flex-direction: column;
   border: 5px solid;
   margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 article.tweet header {
@@ -57,13 +58,23 @@ article.tweet footer {
 .likes {
   padding: 2em;
   padding-right: 3em;
-  color: transparent;
+  color: #8c99c6;
   cursor: pointer;
 }
 
+#tweets {
+  padding: 3em;
+}
+
 /* BELOW ARE ALL THE ON HOVER EFFECTS */
+.tweet:hover {
+  background-color: #f6e8d3;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-2.png");
+  box-shadow: 10px 10px #aa9c87;
+}
+
 .tweet:hover .avatar-and-name {
-  font-weight: 600;
+  text-shadow:0px 0px 1px #545149;
 }
 
 .tweet:hover .username {
@@ -71,18 +82,13 @@ article.tweet footer {
 }
 
 .tweet:hover .message {
-  font-weight: 700;
-  border-bottom: 5px solid;
+  text-shadow:0px 0px 1px #545149;
 }
 
 .tweet:hover .date {
-  font-weight: 600;
+  text-shadow:0px 0px 1px #545149;
 }
 
 .tweet:hover .likes {
-  color: #4056A1;
-}
-
-.tweet:hover {
-  box-shadow: 10px 10px #8c99c6;
+  color: #394d90;
 }

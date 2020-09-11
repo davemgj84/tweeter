@@ -20,7 +20,8 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #F3DFC1;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-2.png");
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   margin-top: 120px;
@@ -28,6 +29,18 @@ body {
 
 main {
   padding: 5%;
+}
+
+.responsive {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Responsive Styling Below */
+@media screen and (max-width: 1000px) {
+  .responsive {
+    display: inline-block;
+  }
 }
 
 /*

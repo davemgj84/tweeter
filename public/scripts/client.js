@@ -9,8 +9,11 @@
 
 $(document).ready(function() {
 
-  //Hides error box for new tweets upon page load:
+  // Hides error box for new tweets upon page load:
   $(".error-message").hide();
+
+  // Hides new tweet form upon page load:
+  $('.new-tweet').hide();
 
   // Variables for my error messages in new tweets -
   // Decided to make variables to make it cleaner below with icons:
@@ -85,13 +88,13 @@ $(document).ready(function() {
 
   $postForm.on('submit', function(event) {
     event.preventDefault();
-    const $errorBox = $(".error-message")
+    const $errorBox = $(".error-message");
     const serializedData = $(this).serialize();
     const characters = $("#tweet-text").val();
     if (characters.length === 0 || characters === null || characters === "") {
-      $errorBox.html(errorBoxHtmlOne).slideDown()
+      $errorBox.html(errorBoxHtmlOne).slideDown();
     } else if (characters.length > 140) {
-      $errorBox.html(errorBoxHtmlTwo).slideDown()
+      $errorBox.html(errorBoxHtmlTwo).slideDown();
     } else {
       $.post('/tweets', serializedData)
         .then(() => {
@@ -103,5 +106,32 @@ $(document).ready(function() {
     }
   });
 
+  // Creates a toggle to open the new tweet message - focuses on text area, ready to type:
+  const $composeTweet = $('.compose-tweet');
+
+  $composeTweet.on('click', function(event) {
+    const $newTweet = $('.new-tweet');
+    const $tweetText = $('#tweet-text');
+    $newTweet.slideToggle();
+    $tweetText.focus();
+  });
+
+  // jquery event that scrolls back to top of page:
+  const $scrollUp = $('#scroll');
+
+  $scrollUp.on("click", function(event) {
+    $(window).scrollTop(0);
+  });
+
+  // hides scroll to top button until down a certain distance on page:
+  $(window).scroll(function() {
+    if ($(this).scrollTop() <= 200) {
+      $scrollUp.addClass('hidden');
+    } else {
+      $scrollUp.removeClass('hidden');
+    }
+  });
+
   loadtweets();
+
 });

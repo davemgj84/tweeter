@@ -12,28 +12,44 @@ nav {
   width: 100%;
 }
 
+@media screen and (max-width: 1000px) {
+  nav {
+    background-color: #e05a00;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  }
+}
+
 #logo {
   padding: 1.5em;
   font-family: "Bungee", cursive;
 }
 
-nav .write-new {
+nav .compose-tweet {
   display: flex;
   flex-direction: column;
   padding: 1.5em;
   padding-top: 2em;
   align-items: center;
+}
+
+nav div button {
+  color: #FFFF;
+  border: 0;
+  background-color: transparent;
+  outline: none;
   cursor: pointer;
 }
 
 nav div p {
   margin: 0;
+  cursor: pointer;
 }
 
 @keyframes chevron {
   0%, 100% {
     transform: translateY(-2px)
-  } 50% {
+  }
+  50% {
     transform: translateY(6px)
   }
 }
@@ -41,5 +57,26 @@ nav div p {
 .fa-angle-double-down {
   color: #e05a00;
   animation: chevron 1.5s ease-in-out infinite;
+}
 
+@keyframes chevronTwo {
+  0%, 100% {
+    transform: translateY(-8px)
+  }
+  50% {
+    transform: translateY(8px)
+  }
+}
+
+#scroll {
+  color: #e05a00;
+  padding: 0.75em;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  animation: chevronTwo 1.5s ease-in-out infinite;
+}
+
+.hidden {
+  display: none;
 }

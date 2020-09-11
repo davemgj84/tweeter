@@ -5,13 +5,16 @@
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
 
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@300;600;700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
     rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7aa139eb66.js" crossorigin="anonymous"></script>
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -22,7 +25,7 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://kit.fontawesome.com/7aa139eb66.js" crossorigin="anonymous"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" crossorigin="anonymous"></script>
 
   <!-- App JS -->
@@ -34,49 +37,60 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span id="logo">tweeter</span>
-    <div class="write-new">
-      <p><strong>Write</strong> a new tweet</p>
+    <div class="compose-tweet">
+      <button><strong>Write</strong> a new tweet</button>
       <p><i class="fas fa-angle-double-down"></i></p>
     </div>
   </nav>
 
-  <header class="top-header">
-    <div class="avatar">
-      <img src="/images/dude.png">
-    </div>
-    <br>
-    <div class="name">
-      <h2>David <span class="last-name">Jardine</span></h2>
-    </div>
-  </header>
+  <div class="responsive">
 
-  <!-- Page-specific (main) content here -->
-  <main class="container">
+    <header class="top-header">
+      <div class="avatar">
+        <img src="/images/tweeterBoy.png">
+      </div>
+      <br>
+      <div class="name">
+        <h2>David <span class="last-name">Jardine</span></h2>
+      </div>
+    </header>
 
-    <section class="new-tweet">
+    <!-- Page-specific (main) content here -->
+    <main class="container">
 
+      <section class="new-tweet">
+
+        <div>
+          <p class="error-message"></p>
+        </div>
+
+        <!-- <h2>Compose Tweet</h2> -->
+        <form id="submit-form">
+          <label for="tweet-text">Tweet all about it!</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div class="submitTweet">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+
+      <section id="tweets">
+
+        <!-- NEW TWEETS LIVE HERE :) -->
+
+        
+      </section>
+      
+      <!-- Scroll to top button: -->
       <div>
-        <p class="error-message"></p>
+        <i id="scroll" class="hidden fas fa-angle-double-up fa-2x"></i>
       </div>
 
-      <!-- <h2>Compose Tweet</h2> -->
-      <form id="submit-form">
-        <label for="tweet-text">Yeah, well, you know, that's just, like, your opinion, man</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div class="submitTweet">
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
 
-    <section id="tweets">
+    </main>
 
-      <!-- NEW TWEETS LIVE HERE :) -->
-
-    </section>
-
-  </main>
+  </div>
 
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
