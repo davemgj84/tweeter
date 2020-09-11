@@ -1,18 +1,32 @@
 /* NEW TWEET STYLING */
 
+/* styling for new tweet container */
+
 .new-tweet {
   margin: 0 auto;
   width: 80%;
 }
+
+/* styling for form spacing */
 
 #submit-form {
   display: flex;
   flex-direction: column;
 }
 
+/* spacing for around the form and the label above "tweet all about it" */
+
 #submit-form label {
   margin-bottom: 1em;
 }
+
+/* styling - font weight for "tweet all about it" */
+
+label {
+  font-weight: 700;
+}
+
+/* styling for textarea (message/tweet input) */
 
 textarea {
   background: transparent;
@@ -22,9 +36,11 @@ textarea {
   resize: none;
   outline: none;
   font-family: "Source Sans Pro", sans-serif;
-  font-weight: 700;
-  color: #4056A1;
+  font-weight: 600;
+  color: #545149;
 }
+
+/* styling for submit tweet and character counter container */
 
 .submitTweet {
   display: flex;
@@ -33,14 +49,18 @@ textarea {
   margin-bottom: 1em;
 }
 
+/* styling for submit tweet button */
+
 .submitTweet button {
   font-family: "Bungee", cursive;
-  background-color: #4056A1;
+  background-color: #ac1e07;
   border-width: 0;
   color: #FFFF;
-  outline-color: #8c99c6;
+  outline-color: #891805;
   cursor: pointer;
 }
+
+/* styling for error message box (tweet too short/long) */
 
 .error-message {
   display: flex;
@@ -49,25 +69,29 @@ textarea {
   font-weight: 700;
   margin: 0 auto;
   border: 3px solid;
-  border-color: #ff0033;
-  color: #ff0033;
+  border-color: #b4341f;
+  color: #b4341f;
   padding: 0.5em;
   margin-bottom: 1em;
   width: 80%;
 }
 
-.submitTweet button:hover {
-  box-shadow: 5px 5px #8c99c6;
-}
+/* styling for character counter font */
 
 output {
   font-family: "Bungee", cursive;
 }
 
-label {
-  font-weight: 700;
-}
+/* class to be applied to character counter when going over 140 characters */
 
 .red {
-  color: red;
+  color: #b4341f;
+}
+
+/* Hover Effects -  */
+
+/* hover effect for submit tweet button */
+
+.submitTweet button:hover {
+  box-shadow: 5px 5px #aa9c87;
 }

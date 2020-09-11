@@ -7,6 +7,8 @@
 /* global document */
 /* eslint-env jquery */
 
+
+// ensure that all js within doc ready function is available after doc is loaded
 $(document).ready(function() {
 
   // Hides error box for new tweets upon page load:
@@ -14,6 +16,7 @@ $(document).ready(function() {
 
   // Hides new tweet form upon page load:
   $('.new-tweet').hide();
+
 
   // Variables for my error messages in new tweets -
   // Decided to make variables to make it cleaner below with icons:
@@ -25,6 +28,7 @@ $(document).ready(function() {
   <i class="fas fa-exclamation-circle"></i> 
   &nbsp;&nbsp; Your tweet is too long - Make sure your tweet is under 140 characters &nbsp;&nbsp; 
   <i class="fas fa-exclamation-circle"></i>`;
+
 
   // ESCAPE FUNCTION to stop malicious activity being passed into the tweet:
   const escape = (string) => {
@@ -39,6 +43,7 @@ $(document).ready(function() {
     };
     return string.replace(regex, match => map[match]);
   };
+
 
   // Creates a tweet element with a tweet template using template literals to pull data from user objects:
   const createTweetElement = function(data) {
@@ -66,7 +71,7 @@ $(document).ready(function() {
     return tweetTemplate;
   };
 
-  // renders the tweets by looping through the user tweet database and creates a tweet element for each tweet,
+  // Renders the tweets by looping through the user tweet database and creates a tweet element for each tweet,
   // the prepends them to the appropriate section.
   const renderTweets = function(data) {
     $('#tweets').empty();
@@ -83,7 +88,7 @@ $(document).ready(function() {
     });
   };
 
-  // AJAX POST REQ HANDLING:
+  // AJAX POST REQ HANDLING - AS WELL AS VALIDATION UPON SUBMIT:
   const $postForm = $('#submit-form');
 
   $postForm.on('submit', function(event) {
@@ -105,6 +110,7 @@ $(document).ready(function() {
         });
     }
   });
+
 
   // Creates a toggle to open the new tweet message - focuses on text area, ready to type:
   const $composeTweet = $('.compose-tweet');

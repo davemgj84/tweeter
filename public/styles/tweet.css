@@ -1,5 +1,13 @@
 /* TWEET CONTAINER LAYOUT */
 
+/* section tag tweets - container which holds all new tweets */
+
+#tweets {
+  padding: 3em;
+}
+
+/* Base styling for creating and templating new tweets */
+
 article {
   display: flex;
   flex-direction: column;
@@ -8,11 +16,15 @@ article {
   margin-bottom: 2em;
 }
 
+/* styling for the header of the tweet - container for avatar, user, username(handle) - spacing */
+
 article.tweet header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+/* styling for avatar and name container - spacing */
 
 .avatar-and-name {
   display: flex;
@@ -21,9 +33,13 @@ article.tweet header {
   padding-left: 3em;
 }
 
+/* styling for avatar (just padding) */
+
 .avatar-and-name img {
   padding-right: 1em;
 }
+
+/* styling for username (handle) */
 
 .username {
   padding: 2em;
@@ -31,6 +47,8 @@ article.tweet header {
   color: transparent;
   font-weight: 700;
 }
+
+/* styling for the messaage container that is tweeted */
 
 .message {
   display: flex;
@@ -41,54 +59,71 @@ article.tweet header {
   word-break: break-word;
 }
 
+/* styling for the message itself (spacing) */
+
 .message p {
   padding-left: 1em;
 }
+
+/* styling for footer container - spacing - for the date & like, share,report */
 
 article.tweet footer {
   display: flex;
   justify-content: space-between;
 }
 
+/* date styling */
+
 .date {
   padding: 2em;
   padding-left: 3em;
 }
 
+/* like, share, report styling */
+
 .likes {
   padding: 2em;
   padding-right: 3em;
-  color: #8c99c6;
+  color: #c46151;
   cursor: pointer;
 }
 
-#tweets {
-  padding: 3em;
-}
+/* ****BELOW ARE ALL THE ON HOVER EFFECTS**** */
 
-/* BELOW ARE ALL THE ON HOVER EFFECTS */
+/* hover effect for tweet container */
+
 .tweet:hover {
   background-color: #f6e8d3;
   background-image: url("https://www.transparenttextures.com/patterns/paper-2.png");
   box-shadow: 10px 10px #aa9c87;
 }
 
+/* hoover effect for avatar and name */
+
 .tweet:hover .avatar-and-name {
-  text-shadow:0px 0px 1px #545149;
+  text-shadow: 0px 0px 1px #545149;
 }
+
+/* hover effect for username (handle) */
 
 .tweet:hover .username {
-  color: #8c99c6;
+  color: #778899;
 }
+
+/* hover effect for tweet message */
 
 .tweet:hover .message {
-  text-shadow:0px 0px 1px #545149;
+  text-shadow: 0px 0px 1px #545149;
 }
+
+/* hover effect for date */
 
 .tweet:hover .date {
-  text-shadow:0px 0px 1px #545149;
+  text-shadow: 0px 0px 1px #545149;
 }
 
+/* hover effect for like, share, report */
+
 .tweet:hover .likes {
-  color: #394d90;
+  color: #ac1e07;
 }

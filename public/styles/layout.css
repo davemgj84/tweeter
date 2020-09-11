@@ -18,6 +18,8 @@ html {
  * Global layout stuff
  */
 
+/* Base stlying for the main body of the Html with background and textures */
+
 body {
   color: #545149;
   background-color: #F3DFC1;
@@ -27,22 +29,23 @@ body {
   margin-top: 120px;
 }
 
+/* Main tag styling - simple padding allowing it to encompass 90% width, but using padding instead */
+
 main {
   padding: 5%;
 }
+
+/* Responsive styling on desktop screens: */
 
 .responsive {
   display: flex;
   justify-content: space-evenly;
 }
 
-/* Responsive Styling Below */
-@media screen and (max-width: 1000px) {
+/* Responsive Styling Below for less than 1024px - non desktop users */
+
+@media only screen and (max-width: 1024px) {
   .responsive {
     display: inline-block;
   }
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */

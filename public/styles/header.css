@@ -1,10 +1,12 @@
 /* HEADER STYLING */
 
+/* Base styling for the main header of the page below the nav, with background and textures */
+
 .top-header {
   height: 400px;
   width: 400px;
-  background-color: #e05a00;
-  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  background-color: #778899;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -12,24 +14,31 @@
   margin-top: 4em;
 }
 
-/* Responsive Styling Below */
-@media screen and (max-width: 1000px) {
+/* Responsive Styling Below for the main header*/
+
+@media only screen and (max-width: 1024px) {
   .top-header {
     width: 100%;
     margin: 0;
   }
 }
 
+/* styling for the avatar image */
+
 .avatar {
   display: flex;
   justify-content: center;
 }
+
+/* styling for the name below the avatar image */
 
 .name {
   display: flex;
   justify-content: center;
   color: #FFFF;
 }
+
+/* styling to make the last name un-bolded as the font in h2's are bold */
 
 .last-name {
   font-weight: 300;

@@ -1,28 +1,36 @@
 /* NAV STYLING */
 
+/* Base styling for the nav bar - fixed position */
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 120px;
-  background: linear-gradient(#8c99c6, #4056A1);
+  background: linear-gradient(#ac1e07, #891805);
   color: #FFFF;
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-@media screen and (max-width: 1000px) {
+/* Responsive nav bar changes - with background and textures */
+
+@media only screen and (max-width: 1024px) {
   nav {
-    background-color: #e05a00;
-    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+    background-color: #778899;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
   }
 }
+
+/* Logo styling for Tweeter: */
 
 #logo {
   padding: 1.5em;
   font-family: "Bungee", cursive;
 }
+
+/* styling for the compose tweet buttton and the chevrons (Write a new tweet) */
 
 nav .compose-tweet {
   display: flex;
@@ -32,6 +40,8 @@ nav .compose-tweet {
   align-items: center;
 }
 
+/* styling for the compose tweet buttton and the chevrons (Write a new tweet) */
+
 nav div button {
   color: #FFFF;
   border: 0;
@@ -40,10 +50,14 @@ nav div button {
   cursor: pointer;
 }
 
+/* styling for the compose tweet buttton and the chevrons (Write a new tweet) */
+
 nav div p {
   margin: 0;
   cursor: pointer;
 }
+
+/* animations for create new tweet button */
 
 @keyframes chevron {
   0%, 100% {
@@ -54,28 +68,37 @@ nav div p {
   }
 }
 
+/* styling for the chevron arrows for the compose tweet button */
+
 .fa-angle-double-down {
-  color: #e05a00;
+  color: #778899;
   animation: chevron 1.5s ease-in-out infinite;
 }
 
+/* animations for scroll to top button */
+
 @keyframes chevronTwo {
   0%, 100% {
-    transform: translateY(-8px)
+    transform: translateY(-6px)
   }
   50% {
-    transform: translateY(8px)
+    transform: translateY(6px)
   }
 }
 
+/* styling for the scroll to top botton inluding animation specifics */
+
 #scroll {
-  color: #e05a00;
-  padding: 0.75em;
+  color: #778899;
+  padding: 0.25em;
   position: fixed;
   right: 0;
   bottom: 0;
   animation: chevronTwo 1.5s ease-in-out infinite;
+  cursor: pointer;
 }
+
+/* class for hidden scroll to top button */
 
 .hidden {
   display: none;

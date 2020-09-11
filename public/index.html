@@ -5,6 +5,7 @@
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
 
+  <!-- disable zoom -->
   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
   <!-- External CSS -->
@@ -25,16 +26,13 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" crossorigin="anonymous"></script>
-
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
 
 </head>
 
 <body>
-  <!-- Top nav bar (fixed) -->
+
+  <!-- Top nav bar (fixed)  - logo and create new tweet button-->
   <nav>
     <span id="logo">tweeter</span>
     <div class="compose-tweet">
@@ -43,28 +41,34 @@
     </div>
   </nav>
 
+  <!-- wrap div around entire section for easier responsive styling -->
   <div class="responsive">
 
+    <!-- Header with avatar, and name -->
     <header class="top-header">
+
       <div class="avatar">
         <img src="/images/tweeterBoy.png">
       </div>
-      <br>
+
       <div class="name">
         <h2>David <span class="last-name">Jardine</span></h2>
       </div>
+
     </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
 
+      <!-- section container for typing a new tweet -->
       <section class="new-tweet">
 
+        <!-- error message box -->
         <div>
           <p class="error-message"></p>
         </div>
 
-        <!-- <h2>Compose Tweet</h2> -->
+        <!-- text form for tweet -->
         <form id="submit-form">
           <label for="tweet-text">Tweet all about it!</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -73,25 +77,25 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+
       </section>
 
+      <!-- NEW TWEETS LIVE HERE - this is the container that holds generated tweets :) -->
       <section id="tweets">
-
-        <!-- NEW TWEETS LIVE HERE :) -->
-
-        
       </section>
-      
+
       <!-- Scroll to top button: -->
       <div>
-        <i id="scroll" class="hidden fas fa-angle-double-up fa-2x"></i>
+        <i id="scroll" class="hidden far fa-hand-point-up fa-2x"></i>
       </div>
-
 
     </main>
 
   </div>
 
+  <!-- App JS  - Put it at the bottom in case someone (me) didnt put the js inside a document ready function -->
+  <!-- Dont worry I did ;)-->
+  <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
 </body>
