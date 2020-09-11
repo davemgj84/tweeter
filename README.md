@@ -7,6 +7,8 @@ This repository is the starter code for the project: Students will fork and clon
 ## Final Product
 !["Tweeter-App-Desktop"](https://github.com/davemgj84/tweeter/blob/master/public/docs/Tweeter-Dj-1.png?raw=true)
 !["Tweeter-App-Mobile"](https://github.com/davemgj84/tweeter/blob/master/public/docs/Tweeter-Dj-2.png?raw=true)
+!["Tweet-On-Hover"]()
+
 
 ## Getting Started
 

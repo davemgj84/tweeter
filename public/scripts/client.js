@@ -20,15 +20,10 @@ $(document).ready(function() {
 
   // Variables for my error messages in new tweets -
   // Decided to make variables to make it cleaner below with icons:
-  const errorBoxHtmlOne = `
-  <i class="fas fa-exclamation-circle"></i> 
-  &nbsp;&nbsp; Please Enter a Message to Tweet &nbsp;&nbsp; 
+  const errorBoxHtmlOne = `Please Enter a Message to Tweet! &nbsp;&nbsp;&nbsp;&nbsp; 
   <i class="fas fa-exclamation-circle"></i>`;
-  const errorBoxHtmlTwo = `
-  <i class="fas fa-exclamation-circle"></i> 
-  &nbsp;&nbsp; Your tweet is too long - Make sure your tweet is under 140 characters &nbsp;&nbsp; 
+  const errorBoxHtmlTwo = `Your tweet is too long! &nbsp;&nbsp;&nbsp;&nbsp; 
   <i class="fas fa-exclamation-circle"></i>`;
-
 
   // ESCAPE FUNCTION to stop malicious activity being passed into the tweet:
   const escape = (string) => {
