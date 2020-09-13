@@ -121,7 +121,8 @@ $(document).ready(function() {
   const $scrollUp = $('#scroll');
 
   $scrollUp.on("click", function(event) {
-    $(window).scrollTop(0);
+    // $(window).scrollTop(0);
+    window.scrollTo({top: 0, behavior: 'smooth'});
   });
 
   // hides scroll to top button until down a certain distance on page:
