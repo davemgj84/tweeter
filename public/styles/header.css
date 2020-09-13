@@ -19,7 +19,7 @@
 /* Give header on desktop box shadow */
 
 .top-header:hover {
-  box-shadow: 5px 5px #aa9c87;
+  box-shadow: 10px 10px #aa9c87;
 }
 
 /* .top-header:hover name {
